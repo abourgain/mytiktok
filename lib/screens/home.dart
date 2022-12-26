@@ -1,21 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:mytiktok/components/VideoPlayerComponent.dart';
+import 'package:mytiktok/components/Feed/FeedComponent.dart';
 
 const List<Map<String, dynamic>> data = [
   {
-    "profile": {"username": "johndoe"},
+    "profile": {
+      "username": "johndoe",
+    },
     "media": "assets/videos/video-1.MOV",
     "description":
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
   },
   {
-    "profile": {"username": "amandajohns"},
+    "profile": {
+      "username": "amandajohns",
+    },
     "media": "assets/videos/video-2.MOV",
     "description":
         "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
   },
   {
-    "profile": {"username": "fabriceluchini"},
+    "profile": {
+      "username": "fabriceluchini",
+    },
     "media": "assets/videos/video-3.MOV",
     "description":
         "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters."
@@ -32,8 +38,8 @@ class HomeScreen extends StatelessWidget {
       body: PageView(
           scrollDirection: Axis.vertical,
           children: data.map((item) {
-            return VideoPlayerComponent(
-              media: item["media"],
+            return FeedComponent(
+              item: item,
             );
           }).toList()),
       bottomNavigationBar: BottomNavigationBar(
