@@ -28,6 +28,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       body: PageView(
           scrollDirection: Axis.vertical,
           children: data.map((item) {
@@ -35,6 +36,29 @@ class HomeScreen extends StatelessWidget {
               media: item["media"],
             );
           }).toList()),
+      bottomNavigationBar: BottomNavigationBar(
+          currentIndex: 1,
+          onTap: (value) => print(value),
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          unselectedItemColor: Colors.white,
+          selectedItemColor: Colors.amber,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: "Home",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.search),
+              label: "Search",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.message_outlined),
+              label: "Messages",
+            ),
+          ]),
     );
   }
 }
