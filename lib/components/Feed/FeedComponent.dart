@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mytiktok/components/Profile/ProfileComponent.dart';
+import 'package:mytiktok/components/Sidebar/SidebarComponent.dart';
 import 'package:mytiktok/components/VideoPlayer/VideoPlayerComponent.dart';
 
 class FeedComponent extends StatelessWidget {
@@ -19,6 +20,11 @@ class FeedComponent extends StatelessWidget {
         right: 100.0,
         child: ProfileComponent(item: item),
       ),
+      Positioned(
+        bottom: 100.0,
+        right: 40.0,
+        child: SidebarComponent(item: item),
+      )
     ]);
   }
 }
