@@ -15,14 +15,14 @@ class FeedComponent extends StatelessWidget {
         media: item["media"],
       ),
       Positioned(
-        bottom: 100.0,
+        bottom: 120.0,
         left: 20.0,
         right: 100.0,
         child: ProfileComponent(item: item),
       ),
       Positioned(
-        bottom: 100.0,
-        right: 40.0,
+        bottom: 120.0,
+        right: 20.0,
         child: SidebarComponent(item: item),
       )
     ]);

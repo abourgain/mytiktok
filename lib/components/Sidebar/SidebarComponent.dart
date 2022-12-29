@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mytiktok/widgets/AvatarWidget.dart';
 import 'package:mytiktok/widgets/CommentWidget.dart';
 import 'package:mytiktok/widgets/LikeWidget.dart';
-import 'package:mytiktok/widgets/ShareWidget.dart';
 
 class SidebarComponent extends StatelessWidget {
   final Map<String, dynamic> item;
